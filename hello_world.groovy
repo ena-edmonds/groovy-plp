@@ -1,1 +1,1 @@
-println("Hello, world!");
+println("Hello, world!"); // example of a super simple hello world that runs, classes and PSVM aren't even required!
