@@ -9,7 +9,7 @@ Being capable of functioning as both a scripting language and a compiled languag
 Groovy is well-documented on its website https://groovy-lang.org/.
 
 # getting started
-Groovy is generally recommended to be used in the IntelliJ IDE by JetBrains, since it carries out of the box support for Java and Groovy and can compile and run both languages. Installation using this method is simple and no extra steps are required to get Groovy working once IntelliJ is installed.
+Groovy is generally recommended to be used in the [IntelliJ IDE](https://www.jetbrains.com/idea/) by JetBrains, since it carries out of the box support for Java and Groovy and can compile and run both languages. Installation using this method is simple and no extra steps are required to get Groovy working once IntelliJ is installed.
 
 Since I prefer light-weight IDEs, I chose to instead use Groovy in VS Code, which required installation of Groovy language support (found by typing "Groovy" into the extension search) to have syntax highlighting for the language. To run Groovy files in VS Code, I installed the "Code Runner" plugin, which supports many popular coding languages and allows for scripts to be run like normal.
 
