@@ -15,4 +15,13 @@ Since I prefer light-weight IDEs, I chose to instead use Groovy in VS Code, whic
 
 Comments in Groovy are written the same way that they are in Java, with `//` for single line and `/* */` for multiline.
 
+```groovy
+println("Hello, world!"); // a simple hello world command, all in 1 line!
+```
+
 Writing a Groovy hello world is much closer to Python than it is Java, since there is a more simplified "println" method. No class definitions or Public Static Void Main are required because of Groovy's scripting-oriented nature, so you just need a single line, and don't forget the semi-colon!!
+
+# naming conventions
+As Groovy maintains interoperability with Java, it takes on Java's naming conventions for variables as well. In Java and Groovy, local variables should be named in camel case, with the first letter being lower case. Constants (global variables) should be named in all caps with underscores separating words.
+
+The first character of a variable name must be a letter, a $ dollar sign, or an underscore, and spaces are not allowed anywhere inside of variable names. Variables are also case-sensitive, so a variable named "hiThere" is distinct from a variable named "Hithere"
