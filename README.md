@@ -30,7 +30,17 @@ The first character of a variable name must be a letter, a $ dollar sign, or an 
 # common data types
 Groovy contains all data types included in Java, with some notable changes. In base Java, almost all data types are objects excluding a few commonly used types which are given primitive versions not derived from the Object class, as well as uppercased Object counterparts, called Wrappers. This means a type like `int` is also available as its Wrapper, `Integer`, and the two can be used interchangeably in many contexts with Java automatically accepting both and making conversions based on context. This process is known as "boxing" when moving from primitive to Wrapper, and "unboxing" when moving from Wrapper to primitive.
 
-In an attempt to be even closer to a 100% object-oriented language, Groovy almost entirely abandons primitives and will automatically convert any declarations of primitives to their Wrapper equivalent behind the scnes
+In an attempt to be even closer to a 100% object-oriented language, Groovy almost entirely abandons primitives and will automatically convert *any* declarations of primitives to their Wrapper equivalent behind the scenes.
+```groovy
+int x = 1;
+Integer y = 1;
+def z = 1;
+
+double a = 2.0;
+def b = a + 1.0;
+def c = 2.0;
+```
+In the above code snippet, variables `x`, `y` and `z` are *all* of the type Integer, and `a`, `b` and `c` are all of type Double.
 
 This change also affects another Java primitive type conversion quirk known as widening. Widening is a process by which Java can automatically convert primitive types to other primitive types with larger memory capacity to make a line of code work. For example, addition of an `int` and a `double` will automatically widen the `int` to a `double` to match types.
 ```Java
@@ -39,3 +49,4 @@ int x = 1;
 double y = 2.0;
 System.out.println(x + y); // will output a double of value 3.0
 ```
+Java prioritizes widening over boxing, but since all variables are automatically boxed, this hierarchy does not exist in Groovy code.
