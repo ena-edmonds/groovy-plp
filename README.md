@@ -24,4 +24,18 @@ Writing a Groovy hello world is much closer to Python than it is Java, since the
 # naming conventions
 As Groovy maintains interoperability with Java, it takes on Java's naming conventions for variables as well. In Java and Groovy, local variables should be named in camel case, with the first letter being lower case. Constants (global variables) should be named in all caps with underscores separating words.
 
-The first character of a variable name must be a letter, a $ dollar sign, or an underscore, and spaces are not allowed anywhere inside of variable names. Variables are also case-sensitive, so a variable named "hiThere" is distinct from a variable named "Hithere"
+The first character of a variable name must be a letter, a $ dollar sign, or an underscore, and spaces are not allowed anywhere inside of variable names. Variables are also case-sensitive, so a variable named `"hiThere"` is distinct from a variable named `"Hithere"`
+
+
+# common data types
+Groovy contains all data types included in Java, with some notable changes. In base Java, almost all data types are objects excluding a few commonly used types which are given primitive versions not derived from the Object class, as well as uppercased Object counterparts, called Wrappers. This means a type like `int` is also available as its Wrapper, `Integer`, and the two can be used interchangeably in many contexts with Java automatically accepting both and making conversions based on context. This process is known as "boxing" when moving from primitive to Wrapper, and "unboxing" when moving from Wrapper to primitive.
+
+In an attempt to be even closer to a 100% object-oriented language, Groovy almost entirely abandons primitives and will automatically convert any declarations of primitives to their Wrapper equivalent behind the scnes
+
+This change also affects another Java primitive type conversion quirk known as widening. Widening is a process by which Java can automatically convert primitive types to other primitive types with larger memory capacity to make a line of code work. For example, addition of an `int` and a `double` will automatically widen the `int` to a `double` to match types.
+```Java
+// example of Java widening
+int x = 1;
+double y = 2.0;
+System.out.println(x + y); // will output a double of value 3.0
+```
