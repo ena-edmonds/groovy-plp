@@ -15,4 +15,4 @@ Since I prefer light-weight IDEs, I chose to instead use Groovy in VS Code, whic
 
 Comments in Groovy are written the same way that they are in Java, with `//` for single line and `/* */` for multiline.
 
-Writing a Groovy hello world is much closer to Python than it is Java, since there is a more simplified "println" method. No class definitions or Public Static Void Main are required because of Groovy's scripting-oriented nature, so you just need a single line!
+Writing a Groovy hello world is much closer to Python than it is Java, since there is a more simplified "println" method. No class definitions or Public Static Void Main are required because of Groovy's scripting-oriented nature, so you just need a single line, and don't forget the semi-colon!!
