@@ -14,3 +14,5 @@ Groovy is generally recommended to be used in the [IntelliJ IDE](https://www.jet
 Since I prefer light-weight IDEs, I chose to instead use Groovy in VS Code, which required installation of Groovy language support (found by typing "Groovy" into the extension search) to have syntax highlighting for the language. To run Groovy files in VS Code, I installed the "Code Runner" plugin, which supports many popular coding languages and allows for scripts to be run like normal.
 
 Comments in Groovy are written the same way that they are in Java, with `//` for single line and `/* */` for multiline.
+
+Writing a Groovy hello world is much closer to Python than it is Java, since there is a more simplified "println" method. No class definitions or Public Static Void Main are required because of Groovy's scripting-oriented nature, so you just need a single line!
