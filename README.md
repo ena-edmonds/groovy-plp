@@ -50,3 +50,5 @@ double y = 2.0;
 System.out.println(x + y); // will output a double of value 3.0
 ```
 Java prioritizes widening over boxing, but since all variables are automatically boxed, this hierarchy does not exist in Groovy code. In Groovy, the type for a primitive when multiple options exist is chosen based off of what fits, if you declare something too big for a given type, Groovy will automatically scale up, eventually landing at BigInteger or BigDecimal which both have more complex and accurate precision than `double` or `int`.
+
+The included script `data_types.groovy` demonstrates definitions some commonly data types with comments on their nuances.
