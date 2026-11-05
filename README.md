@@ -63,9 +63,11 @@ petLastName = ownerLastName ?: "Unkown"; // a groovy Elvis operator, which remov
 ```
 
 # control structures
-Control structures, conditionals and loops, are mostly identical to Java. 
+Control structures, conditionals and loops, are mostly identical to Java. All control structures' code space are defined using opening and closing curly brackets `{}`.
 
-Conditionals, "if" and "else" statments are identical to Java. Examples of these statements can be viewed in the included `control_structures.groovy` demo script. Typical Java switch cases also work in Groovy, however switch cases have also been expanded to support any variable type instead of just `byte`, `short`, `char`, and `int` like in vanilla Java.
+Conditionals, "if" and "else" statments are identical to Java. Examples of these statements can be viewed in the included `control_structures.groovy` demo script. Typical Java switch cases also work in Groovy, where you must use `break` in a case to exit the switch or else it will `continue` to the below cases. However switch cases have also been expanded to support any variable type instead of just `byte`, `short`, `char`, and `int` like in vanilla Java.
+
+Like base Java, Groovy solves the "dangling else" problem by attaching an unclear `else` statement to the nearest unmatched `if` statement above it.
 
 In regards to loops, "while" and "do-while" loops are identical to Java and do not have any changes. "For" loops also maintain their default Java implementation but have also been expanded to support comma-separated expressions, allowing for multi-assignment within loops which was not previously possible.
 ```groovy
