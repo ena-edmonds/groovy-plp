@@ -88,3 +88,30 @@ for ( i in 0..9 ) {
 }
 ```
 Example for in loop taken from [Groovy docs](https://docs.groovy-lang.org/docs/latest/html/documentation/#_for_in_loop).
+
+# functions
+Funtions, or methods as they are known in Groovy, can be written identically to those in Java, or take advantage of the expanded features that emerge from Groovy's dynamic typing. Methods can be declared with a given return type, or with the Groovy `def` keyword to make their return type ambigous.
+```groovy
+double multiply(double a, double b) // a valid method header
+def mult(a, b) // also a valid method header
+```
+Groovy also makes changes to how returning works in method. In a method whose return type is not defined in the header does not neccessarily need to contain a `return` line, but Groovy methods will *always* return a value. If no return type is specified and no `return` lines exist in the method, the last evaluated line's output will be returned when the subprogram exits.
+```groovy
+def ambiguous(x, y) {
+    x + y // the last (and only) evaluated line in this method
+}
+```
+Even though no return is specified in the above method, running this method will return the addition of the two input variables, and this output can be caught with a variable.
+
+Since Groovy compiles to JVM binaries when run, it doesn't matter where methods are placed in relation to when they are called as everything is put together before any lines are run, your program cannot end up in a situation where it is calling a method that doesn't exist unless that method actually doesn't exist, or is private to the location where you are calling it from. Also like Java, methods can take in any number of inputs with varying types, and using mixed-type arrays, Groovy also extends this to outputs.
+```groovy
+def multiReturn(i, j) {
+    return [j, i]
+}
+def a = 1
+def b = 2
+(a, b) = multiReturn(a, b) // python-esque catching multiple variables from a returned array
+// after this function, a = 2, and b = 1
+```
+
+In terms of scope, memory figurations, and pass-by rules, Groovy is identical to Java. All subprograms are pass-by-value except for when complex Objects like ArrayLists are passed, in which case a reference to their location on the heap is passed. Smaller variables stored on the stack are pass-by-value and cannot edit the original variable. This allows for the same side-effects as Java where the original of a complex object can have its attributes edited in a method without explicitly returning those changes. An example of this behavior, along with several other demo functions, can be viewed in the accompanying `functions.groovy` file.
