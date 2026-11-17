@@ -114,4 +114,6 @@ def b = 2
 // after this function, a = 2, and b = 1
 ```
 
-In terms of scope, memory figurations, and pass-by rules, Groovy is identical to Java. All subprograms are pass-by-value except for when complex Objects like ArrayLists are passed, in which case a reference to their location on the heap is passed. Smaller variables stored on the stack are pass-by-value and cannot edit the original variable. This allows for the same side-effects as Java where the original of a complex object can have its attributes edited in a method without explicitly returning those changes. An example of this behavior, along with several other demo functions, can be viewed in the accompanying `functions.groovy` file.
+In terms of scope, memory figurations, and pass-by rules, Groovy is identical to Java. Variables declared within or passed to a subprogram exist only within that subprogram, including loop control variables in loops. 
+
+All subprograms are pass-by-value except for when complex Objects like ArrayLists are passed, in which case a reference to their location on the heap is passed. Smaller variables stored on the stack are pass-by-value and cannot edit the original variable. This allows for the same side-effects as Java where the original of a complex object can have its attributes edited in a method without explicitly returning those changes. An example of this behavior, along with several other demo functions, can be viewed in the accompanying `functions.groovy` file.
